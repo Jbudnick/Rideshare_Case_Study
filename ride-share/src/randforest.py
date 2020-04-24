@@ -50,7 +50,7 @@ def plot_roc(X, y, clf_class, plot_name, **kwargs):
     plt.ylabel('True Positive Rate')
     plt.title('{} Receiver operating characteristic'.format(plot_name))
     plt.legend(loc="lower right")
-    plt.savefig('ROC{}'.format(plot_name))
+    plt.savefig('images/ROC{}.png'.format(plot_name))
     plt.show()
 
 def plot_feat_importances(model, feature_names, out_filepath):
@@ -99,7 +99,7 @@ if __name__ =='__main__':
     plot_roc(X, y, RandomForestClassifier, plot_name='Random_Forest')
 
     plot_feat_importances(rf, churn_train_df.columns,
-                          'RandomForestImportances')
+                          'images/RandomForestImportances.png')
 
     #Test with holdout data
     y_true = churn_test_df.pop('churn').values
