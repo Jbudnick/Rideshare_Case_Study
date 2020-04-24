@@ -23,7 +23,6 @@ def date_30_days_ago():
 
 
 if __name__ == '__main__':
-    print("Working")
     churn_df = pd.read_csv('data/churn.csv')
     churn_test_df = pd.read_csv('data/churn_test.csv')
     churn_train_df = pd.read_csv('data/churn_train.csv')
