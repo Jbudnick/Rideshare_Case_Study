@@ -4,31 +4,6 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 import datetime as dt
 
-#Assuming Churn is the positive (Churn = 1)
-
-# Surge percent and avg surge may be correlated; may need to drop one or the other
-
-# NaN values:
-#   Convert phones to dummy values - only 3 values Baseline: Unknown
-
-#   Missing ratings:
-#       Or classify ratings as high, medium, low, unknown instead of numerical floats low = below 4, medium between 4 and 5, high = 5, unknown = NaN
-#           Set up in a way that can be easily changed
-#       Take average of values to fill NaNs for - dummy variable for Nan or not?
-#       Trying to predict churn; how to handle missing ratings
-
-#   Clean_data function - Sam 
-
-# Taylor and Allison - EDA
-
-
-#churn_df['avg_rating_by_driver'].hist()
-
-# Random Forest
-# Gradient Boosted Trees
-# Logistic Regression - Need standardization
-# MLP 
-
 
 def clean_data(data, date_col_list, thresh_dict={"driver": 4, "passenger": 4}):
     cleaned_df = data.copy()
@@ -79,7 +54,7 @@ def plot_feat_importances(model, feature_names, out_filepath):
     plt.savefig(out_filepath)
     plt.close()
     return
-    
+
 if __name__ == '__main__':
     churn_df = pd.read_csv('data/churn.csv')
     churn_test_df = pd.read_csv('data/churn_test.csv')
