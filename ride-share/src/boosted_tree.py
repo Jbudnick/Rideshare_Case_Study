@@ -67,7 +67,7 @@ if __name__ == "__main__":
     feature_names = list(churn_train_df.columns[feature_importances[-1:-6:-1]])
     print("\n12: Top Five:", feature_names)
 
-    plot_feat_importances(abr, churn_train_df.columns, 'image/adaboost_feat_importance.png')
+    plot_feat_importances(abr, churn_train_df.columns, 'images/adaboost_feat_importance.png')
 
     y_pred_holdout = abr.predict(X_holdout)
     print("AdaBoost Accuracy:", accuracy_score(y_holdout, y_pred_holdout))

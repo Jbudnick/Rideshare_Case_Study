@@ -34,7 +34,7 @@ if __name__ == '__main__':
     print("Precision:\t", precision_score(y_test, y_preds))
     print("Recall:\t\t", recall_score(y_test, y_preds))
 
-    plot_feat_importances(model, headers, "feature_importances_gbc.png")
+    plot_feat_importances(model, headers, "images/feature_importances_gbc.png")
 
     print("\nHoldout")
 
