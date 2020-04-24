@@ -23,5 +23,7 @@ if __name__ == "__main__":
     ax.bar(df_cv['Model'], df_cv['Accuracy_CV'], color='b', label="Cross Validation")
     ax.bar(df_ho['Model'], df_ho['Accuracy_HO'], color='skyblue', label="Holdout", width=0.5)
     ax.set_ylim((0.7, 0.9)) 
+    ax.set_ylabel("Accuracy Score")
+    ax.set_title("Model Accuracies")
     ax.legend()
     plt.savefig("images/score_plot.png")
