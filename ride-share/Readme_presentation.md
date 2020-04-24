@@ -62,17 +62,16 @@ Surprisingly, a regular decision tree without bagging or aggregating performed r
 <p> 
 
 
-With Adaboost
-
-<p>
-<img src="images/adaboost_feat_importance.png" width="800">
-<p>
-
 ## Gradient Boosted Classifier
 <p>
 <img src="images/feature_importances_gbc.png" width="800">
 <p>
 
+### With Adaboost
+
+<p>
+<img src="images/adaboost_feat_importance.png" width="800">
+<p>
 
 ## Model Results
 | Model                     |   Accuracy_CV |   Precision_CV |   Recall_CV |   Accuracy_HO |   Precision_HO |   Recall_HO |
