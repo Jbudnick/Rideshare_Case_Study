@@ -92,7 +92,7 @@ Surprisingly, a regular decision tree without bagging or aggregating performed r
 
 | Model                     |   1st | 	2nd |  3rd | 	4th| 	  5th | 
 |:--------------------------|--------------:|---------------:|------------:|--------------:|---------------:|
-GradientBoosted| weekday_pct | city king's landing  | low_passenger_rating | high_passenger_rating  | luxury_car_user |
+GradientBoosted| weekday_pct | low_passenger_rating | surge_pct            | city_king's landing    | luxury_car_user |
 Adaboost| weekday_pct | city king's landing  | low_passenger_rating | high_passenger_rating  | luxury_car_user |
 RandomForest| avg_dist    | week_day_pct         | surge_pct            | trips_in_first_30_days | avg_surge       |
 DecisionTree| surge_pct   | week_day_pct         | city_king's landing  | avg_dist               | luxury_car_user |
