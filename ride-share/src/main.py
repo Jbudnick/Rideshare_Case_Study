@@ -36,7 +36,7 @@ def clean_data(data, date_col_list, thresh_dict={"driver": 4, "passenger": 4}):
 
     # convert date_col_list to datetime
     for col in date_col_list:
-        cleaned_df[col] = pd.to_datetime(churn_df[col])
+        cleaned_df[col] = pd.to_datetime(cleaned_df[col])
     
     # create churn col
     cleaned_df['churn'] = cleaned_df['last_trip_date'] < date_30_days_ago('2014-07-01')
