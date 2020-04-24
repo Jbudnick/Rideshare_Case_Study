@@ -87,7 +87,17 @@ Surprisingly, a regular decision tree without bagging or aggregating performed r
 
 # Relevance to the real world
 
-<img src="images/ROCRandom_Forest.png" width="800">
+<img src="images/ROCRandom_Forest.png" width="700">
+<br>
+
+| Model                     |   1st | 	2nd |  3rd | 	4th| 	  5th | 
+|:--------------------------|--------------:|---------------:|------------:|--------------:|---------------:|
+GradientBoosted| weekday_pct | city king's landing  | low_passenger_rating | high_passenger_rating  | luxury_car_user |
+Adaboost| weekday_pct | city king's landing  | low_passenger_rating | high_passenger_rating  | luxury_car_user |
+RandomForest| avg_dist    | week_day_pct         | surge_pct            | trips_in_first_30_days | avg_surge       |
+DecisionTree| surge_pct   | week_day_pct         | city_king's landing  | avg_dist               | luxury_car_user |
+
+<br>
 
 We would recommend that the company look at service/drivers in the King's Landing city, as riders in this area are one of the most important factors in predicting churn. Additionally, passengers who did not give drivers an average score of 5 stars are likely to churn. 
 Also, weekday ridership is consistently in the top important features. We would recommend perhaps looking at the number of available drivers on weekdays, as possibly customers are getting frustrated that not many are available during this time.
