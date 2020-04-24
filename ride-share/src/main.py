@@ -74,3 +74,5 @@ if __name__ == '__main__':
     churn_df = clean_data(churn_df, ['last_trip_date', 'signup_date'])
     churn_test_df = clean_data(churn_test_df, ['last_trip_date', 'signup_date'])
     churn_train_df = clean_data(churn_train_df, ['last_trip_date', 'signup_date'])
+
+    churn_train_df.info()
