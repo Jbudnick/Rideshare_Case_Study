@@ -66,6 +66,20 @@ def date_30_days_ago(date):
     earliest_date = current_date - dt.timedelta(days=30)
     return earliest_date
 
+def plot_feat_importances(model, feature_names, out_filepath):
+    importances = model.feature_importances_
+    indices = np.argsort(importances)[::-1]
+    plt.style.use('ggplot')
+    fig, ax = plt.subplots(1, 1, figsize=(10,6))
+    ax.bar(feature_names[indices][:5], importances[indices][:5], color="blue")
+    ax.set_title(f"Feature importances - {type(model).__name__}")
+    ax.set_xlabel("Feature", fontsize=16)
+    ax.set_ylabel("Feature importance", fontsize=16)
+    plt.tight_layout()
+    plt.savefig(out_filepath)
+    plt.close()
+    return
+    
 if __name__ == '__main__':
     churn_df = pd.read_csv('data/churn.csv')
     churn_test_df = pd.read_csv('data/churn_test.csv')
