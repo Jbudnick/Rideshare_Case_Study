@@ -9,6 +9,8 @@ import datetime as dt
 
 def clean_data(data, col_list):
     cleaned_df = data.copy()
+    cleaned_df = pd.get_dummies(data, columns=['city'])
+    cleaned_df = pd.get_dummies(data, columns=['city'])
     for col in col_list:
         cleaned_df[col] = pd.to_datetime(churn_df[col])
     cleaned_df['churn'] = cleaned_df['last_trip_date'] < date_30_days_ago()
